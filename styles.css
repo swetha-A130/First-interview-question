@@ -1,0 +1,37 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+input[type="text"], input[type="email"], input[type="number"], select {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+button {
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#hobby-container {
+    margin-bottom: 10px;
+}
+
+.hobby-input {
+    margin-bottom: 5px;
+}
+
+.delete-hobby {
+    margin-left: 10px;
+    cursor: pointer;
+}

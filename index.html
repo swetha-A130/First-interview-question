@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form and Table with Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h2>Registration Form</h2>
+    
+    <form id="form">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="gender">Gender:</label><br>
+        <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label for="hobbies">Hobbies:</label><br>
+        <div id="hobby-container">
+            <div class="hobby-input">
+                <input type="text" id="hobbies-1" name="hobbies[]" required>
+                <button type="button" class="delete-hobby" onclick="deleteHobby(this)">Delete</button>
+            </div>
+        </div>
+        <button type="button" id="add-hobby">Add Hobby</button><br><br>
+
+        <label for="agreement">
+            <input type="checkbox" id="agreement" name="agreement" required>
+            I agree to the terms and conditions
+        </label><br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <h2>Submitted Data</h2>
+
+    <!-- Search Bar -->
+    <input type="text" id="search" onkeyup="searchTable()" placeholder="Search for names..">
+    
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Hobbies</th>
+                <th>Action</th> <!-- Added Action column for delete button -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table data will be inserted here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
